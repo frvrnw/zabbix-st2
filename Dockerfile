@@ -56,6 +56,9 @@ RUN addgroup zabbix && \
             mariadb-client-libs \
             net-snmp-agent-libs \
             openipmi-libs \
+			python \
+			python-dev \
+			py-pip \
             pcre \
             unixodbc && \
     rm -rf /var/cache/apk/*
@@ -85,9 +88,6 @@ RUN apk add ${APK_FLAGS_DEV} --virtual build-dependencies \
             openldap-dev \
             pcre-dev \
             subversion \
-			python \
-			python-dev \
-			py-pip \
             unixodbc-dev && \
     cd /tmp/ && \
     svn --quiet export ${ZBX_SOURCES} zabbix-${ZBX_VERSION} && \
