@@ -88,7 +88,6 @@ RUN apk add ${APK_FLAGS_DEV} --virtual build-dependencies \
 			python \
 			python-dev \
 			py-pip \
-			&& pip install st2client \
             unixodbc-dev && \
     cd /tmp/ && \
     svn --quiet export ${ZBX_SOURCES} zabbix-${ZBX_VERSION} && \
